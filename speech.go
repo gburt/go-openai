@@ -38,6 +38,7 @@ const (
 type CreateSpeechRequest struct {
 	Model          SpeechModel          `json:"model"`
 	Input          string               `json:"input"`
+	Instructions   string               `json:"instruction,omitempty"` // Not supported in tts-1 or tts-1-hd
 	Voice          SpeechVoice          `json:"voice"`
 	ResponseFormat SpeechResponseFormat `json:"response_format,omitempty"` // Optional, default to mp3
 	Speed          float64              `json:"speed,omitempty"`           // Optional, default to 1.0
